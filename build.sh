@@ -17,6 +17,8 @@ command -v pandoc >/dev/null 2>&1 || { echo "Error: pandoc not found" >&2; exit 
 
 mkdir -p "$OUT" "$POSTS_OUT"
 
+touch "$OUT/.nojekyll"
+
 # Copy static assets
 cp style.css "$OUT/style.css"
 [[ -f _colors.css ]] && cp _colors.css "$OUT/_colors.css" \
@@ -34,7 +36,7 @@ build_page() {
     --from=markdown+yaml_metadata_block \
     --to=html5 \
     --standalone \
-    --highlight-style=kate \
+    --syntax-highlighting=kate \
     --variable="active_${active}:true" \
     --output="$dest"
 
