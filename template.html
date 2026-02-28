@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanay Nathan</title>
+  <link rel="stylesheet" href="/_colors.css" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="/">~/tanay</a>
+    <nav class="site-nav">
+      <a href="/"        $if(active_home)$    class="active"$endif$>~</a>
+      <!-- <a href="/blog"    $if(active_blog)$    class="active"$endif$>blog</a> -->
+      <!-- <a href="/projects"$if(active_projects)$class="active"$endif$>projects</a> -->
+      <!-- <a href="/resume"  $if(active_resume)$  class="active"$endif$>resume</a> -->
+    </nav>
+  </header>
+
+  <main class="content">
+    $if(title)$
+    <h1 class="page-title">
+      <span class="prompt">❯</span> $title$
+    </h1>
+    $endif$
+
+    $body$
+  </main>
+
+  <footer class="site-footer">
+    <span class="muted">Tanay Nathan &copy; 2026 — built with pandoc, markdown, &amp; bash</span>
+  </footer>
+</body>
+</html>
