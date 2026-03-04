@@ -168,6 +168,24 @@ pre code {
 
 .muted { color: var(--color-muted); }
 
+/* ── Theme toggle ───────────────────────────────────────────────── */
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  padding: 0;
+  line-height: inherit;
+}
+#theme-toggle:hover { color: var(--color-foreground); }
+
+/* Label shows the mode you'll switch TO */
+[data-theme="light"] #theme-toggle::after { content: "[dark]"; }
+[data-theme="dark"]  #theme-toggle::after { content: "[light]"; }
+
 /* ── Utility ────────────────────────────────────────────────────── */
 
 .tag {
